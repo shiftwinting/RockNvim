@@ -1,3 +1,11 @@
+-- DO NOT MODIFY THIS FILE UNLESS CONTRIBUTING TO PROJECT
+--
+-- You can find your private config at:
+-- stdpath('config')/lua/user/config/init.lua
+--
+-- You can find your config path using the follwing command:
+-- :echo stdpath('config')
+
 options = require('rocknvim.options')
 options.set()
 
