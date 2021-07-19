@@ -1,1 +1,4 @@
 plugin/
+
+lua/user/config/*
+lua/user/modules/*
