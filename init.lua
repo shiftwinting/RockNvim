@@ -31,13 +31,14 @@ local function create_dir(dir)
 end
 
 local config_path = fn.stdpath('config')
-create_dir(config_path .. '/lua/user/')
-create_dir(config_path .. '/lua/user/config/')
-create_dir(config_path .. '/lua/user/modules/')
-
 local user_init_path = config_path .. '/lua/user/config/init.lua'
 if fn.filereadable(user_init_path) == 0 then
+  create_dir(config_path .. '/lua/user/')
+  create_dir(config_path .. '/lua/user/config/')
+
   local user_config_file = io.open(user_init_path, 'w')
   user_config_file:write("")
   user_config_file:close()
 end
+
+create_dir(config_path .. '/lua/user/modules/')
