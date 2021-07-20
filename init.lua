@@ -1,7 +1,7 @@
 -- DO NOT MODIFY THIS FILE UNLESS CONTRIBUTING TO PROJECT
 --
 -- You can find your private config at
--- stdpath('config')/lua/user/config/init.lua
+-- stdpath('config')/lua/rockuser/config/init.lua
 --
 -- You can find your config path using the follwing command
 -- :echo stdpath('config')
@@ -31,14 +31,14 @@ local function create_dir(dir)
 end
 
 local config_path = fn.stdpath('config')
-local user_init_path = config_path .. '/lua/user/config/init.lua'
-if fn.filereadable(user_init_path) == 0 then
-  create_dir(config_path .. '/lua/user/')
-  create_dir(config_path .. '/lua/user/config/')
+local rockuser_init_path = config_path .. '/lua/rockuser/config/init.lua'
+if fn.filereadable(rockuser_init_path) == 0 then
+  create_dir(config_path .. '/lua/rockuser/')
+  create_dir(config_path .. '/lua/rockuser/config/')
 
-  local user_config_file = io.open(user_init_path, 'w')
-  user_config_file:write("")
-  user_config_file:close()
+  local rockuser_config_file = io.open(rockuser_init_path, 'w')
+  rockuser_config_file:write("")
+  rockuser_config_file:close()
 end
 
-create_dir(config_path .. '/lua/user/modules/')
+create_dir(config_path .. '/lua/rockuser/modules/')

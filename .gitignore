@@ -1,4 +1,4 @@
 plugin/
 
-lua/user/config/*
-lua/user/modules/*
+lua/rockuser/config/*
+lua/rockuser/modules/*
