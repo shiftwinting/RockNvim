@@ -1,6 +1,6 @@
 local M = {}
 
-M.default = {
+M.defaults = {
   fileencoding = "utf-8", -- Set file encoding
   hidden = true, -- Edit multiple files at once without having to save
   clipboard = "unnamedplus", -- Access system clipboard
@@ -23,7 +23,7 @@ M.default = {
 }
 
 function M.set(options)
-  M.options = vim.tbl_extend("force", M.default, options or {})
+  M.options = vim.tbl_extend("force", M.defaults, options or {})
   for k, v in pairs(M.options) do
     vim.opt[k] = v
   end
